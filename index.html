@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Básico -->
+    <title>AVYRA | Beyond Every Journey — Soluciones Premium para Viajeros</title>
+    <meta name="description" content="AVYRA es una marca ecuatoriana fundada en Tulcán por Melany Sarchi, dedicada a crear productos y soluciones premium para viajeros modernos. Más allá de cada viaje.">
+    <meta name="keywords" content="AVYRA, Beyond Every Journey, accesorios de viaje Ecuador, maleta inteligente, mochila de viaje, Tulcán, Melany Sarchi, artículos de viaje premium">
+    <meta name="author" content="Melany Sarchi - AVYRA Ecuador">
+    <meta property="og:title" content="AVYRA — Beyond Every Journey">
+    <meta property="og:description" content="Más allá de cada viaje: ingeniería, confort y distinción ecuatoriana diseñada para el viajero contemporáneo.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts: Cormorant Garamond (Editorial) & Plus Jakarta Sans (UI/Cuerpo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0F223D',
+                            light: '#162E52',
+                            dark: '#091526'
+                        },
+                        burgundy: {
+                            DEFAULT: '#6B1D2F',
+                            light: '#84253B',
+                            dark: '#4F1422'
+                        },
+                        beige: {
+                            DEFAULT: '#F5F1EB',
+                            dark: '#EAE2D6',
+                            light: '#FAF8F5'
+                        },
+                        champagne: {
+                            DEFAULT: '#C8A97E',
+                            light: '#DFC7A7'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Estilos personalizados para animaciones sutiles y detalles de marca */
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAF8F5;
+            color: #0F223D;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .font-editorial {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+        }
+
+        /* Animación de entrada al hacer scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: all 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Efecto de brillo sutil en tarjetas */
+        .product-card:hover .product-img {
+            transform: scale(1.06);
+        }
+
+        /* Animación discreta para botón flotante de WhatsApp */
+        @keyframes subtlePulse {
+            0%, 100% {
+                box-shadow: 0 10px 25px -5px rgba(15, 34, 61, 0.35), 0 0 0 0 rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 10px 25px -5px rgba(15, 34, 61, 0.35), 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+        }
+
+        .whatsapp-float {
+            animation: subtlePulse 3s infinite;
+        }
+
+        /* Barra de desplazamiento elegante */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F5F1EB;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #162E52;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6B1D2F;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-burgundy selection:text-white">
+
+    <!-- ==================== NAVEGACIÓN INSTITUCIONAL ==================== -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-5 px-4 sm:px-8 lg:px-12 text-white">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Logotipo Minimalista AVYRA -->
+            <a href="#inicio" class="flex items-center gap-3 group focus:outline-none">
+                <div class="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md border border-white/25 flex items-center justify-center transition-all duration-300 group-hover:border-champagne" id="logo-badge">
+                    <!-- Emblema geométrico de brújula/horizonte -->
+                    <svg class="w-6 h-6 text-champagne" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 3L27 27L16 21.5L5 27L16 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                        <path d="M10.5 18.5H21.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-editorial text-2xl sm:text-3xl font-bold tracking-[0.22em] leading-none">AVYRA</span>
+                    <span class="text-[9px] tracking-[0.28em] uppercase text-champagne font-medium mt-0.5">Beyond Every Journey</span>
+                </div>
+            </a>
+
+            <!-- Enlaces Desktop -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide">
+                <a href="#inicio" class="nav-link hover:text-champagne transition-colors py-1">Inicio</a>
+                <a href="#marca" class="nav-link hover:text-champagne transition-colors py-1">Nuestra Marca</a>
+                <a href="#productos" class="nav-link hover:text-champagne transition-colors py-1">Productos</a>
+                <a href="#experiencia" class="nav-link hover:text-champagne transition-colors py-1">Experiencia</a>
+                <a href="#por-que-avyra" class="nav-link hover:text-champagne transition-colors py-1">¿Por qué AVYRA?</a>
+                <a href="#contacto" class="nav-link hover:text-champagne transition-colors py-1">Contacto</a>
+            </nav>
+
+            <!-- Botón CTA Desktop -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="#productos" class="px-5 py-2.5 rounded-full bg-burgundy hover:bg-burgundy-light text-white text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-lg hover:shadow-burgundy/40 border border-white/10">
+                    Explorar Colección
+                </a>
+            </div>
+
+            <!-- Botón Menú Móvil -->
+            <button id="mobile-menu-btn" aria-label="Abrir menú de navegación" class="lg:hidden p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition">
+                <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobile-menu" class="hidden lg:hidden mt-4 mx-auto max-w-7xl rounded-2xl bg-navy/95 backdrop-blur-xl border border-white/15 p-6 shadow-2xl text-white">
+            <div class="flex flex-col space-y-4 text-base font-medium">
+                <a href="#inicio" class="mobile-nav-link py-2 border-b border-white/10 hover:text-champagne transition">Inicio</a>
+                <a href="#marca" class="mobile-nav-link py-2 border-b border-white/10 hover:text-champagne transition">Nuestra Marca</a>
+                <a href="#productos" class="mobile-nav-link py-2 border-b border-white/10 hover:text-champagne transition">Nuestros Productos</a>
+                <a href="#experiencia" class="mobile-nav-link py-2 border-b border-white/10 hover:text-champagne transition">Experiencia AVYRA</a>
+                <a href="#por-que-avyra" class="mobile-nav-link py-2 border-b border-white/10 hover:text-champagne transition">¿Por qué AVYRA?</a>
+                <a href="#contacto" class="mobile-nav-link py-2 hover:text-champagne transition">Contacto</a>
+                <a href="#productos" class="mobile-nav-link mt-2 text-center py-3 rounded-xl bg-burgundy text-white text-xs uppercase tracking-widest font-semibold">
+                    Explorar Colección
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== 1. INICIO (HERO EDITORIAL) ==================== -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-navy-dark">
+        <!-- Imagen de fondo editorial de viaje/aeropuerto -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=2000&q=85" 
+                alt="Vista aérea desde cabina de avión sobre el horizonte al amanecer representando el espíritu de AVYRA" 
+                class="w-full h-full object-cover object-center scale-105 transition-transform duration-1000"
+                onerror="this.src='https://placehold.co/1920x1080/0F223D/C8A97E?text=AVYRA+BEYOND+EVERY+JOURNEY'"
+            >
+            <!-- Superposición degradada sofisticada en azul profundo y borgoña sutil -->
+            <div class="absolute inset-0 bg-gradient-to-r from-navy-dark/95 via-navy/80 to-burgundy-dark/55"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-dark via-transparent to-navy-dark/40"></div>
+        </div>
+
+        <!-- Contenido Principal Hero -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pt-28 pb-20 w-full">
+            <div class="max-w-3xl">
+                <!-- Etiqueta de origen -->
+                <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-champagne text-xs uppercase tracking-[0.25em] font-medium mb-8">
+                    <span class="w-2 h-2 rounded-full bg-champagne animate-pulse"></span>
+                    <span>Diseño Ecuatoriano • Tulcán, Ecuador</span>
+                </div>
+
+                <!-- Logotipo y Eslogan Principal -->
+                <h1 class="font-editorial text-5xl sm:text-7xl lg:text-8xl font-semibold text-white tracking-tight leading-[0.98] mb-4">
+                    AVYRA
+                </h1>
+                <p class="text-champagne text-lg sm:text-2xl font-medium tracking-[0.32em] uppercase mb-6">
+                    BEYOND EVERY JOURNEY
+                </p>
+
+                <!-- Línea divisoria elegante -->
+                <div class="w-24 h-0.5 bg-gradient-to-r from-burgundy-light to-champagne mb-7 rounded-full"></div>
+
+                <!-- Frase comercial -->
+                <p class="text-beige/90 text-lg sm:text-xl font-light leading-relaxed max-w-2xl mb-10">
+                    <strong class="font-semibold text-white">Más allá de cada viaje:</strong> ingeniería funcional, confort ergonómico y distinción contemporánea diseñada en Ecuador para acompañar cada destino con total confianza.
+                </p>
+
+                <!-- Botones de acción -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                    <a href="#marca" class="px-8 py-4 rounded-full bg-burgundy hover:bg-burgundy-light text-white text-sm uppercase tracking-widest font-semibold transition-all duration-300 shadow-xl shadow-burgundy/30 flex items-center justify-center gap-3 group">
+                        <span>Conocer la Marca</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                    <a href="#productos" class="px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 text-sm uppercase tracking-widest font-semibold transition-all duration-300 flex items-center justify-center gap-2">
+                        <span>Ver Soluciones de Viaje</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Indicadores institucionales discretos en la parte inferior del Hero -->
+            <div class="mt-16 pt-8 border-t border-white/15 grid grid-cols-2 md:grid-cols-4 gap-6 text-white/85">
+                <div>
+                    <p class="text-xs uppercase tracking-widest text-champagne mb-1">Concepto</p>
+                    <p class="font-editorial text-xl font-medium">Más allá de cada viaje</p>
+                </div>
+                <div>
+                    <p class="text-xs uppercase tracking-widest text-champagne mb-1">Colección</p>
+                    <p class="font-editorial text-xl font-medium">6 Soluciones Esenciales</p>
+                </div>
+                <div>
+                    <p class="text-xs uppercase tracking-widest text-champagne mb-1">Origen</p>
+                    <p class="font-editorial text-xl font-medium">Tulcán, Carchi — Ecuador</p>
+                </div>
+                <div>
+                    <p class="text-xs uppercase tracking-widest text-champagne mb-1">Estándar</p>
+                    <p class="font-editorial text-xl font-medium">Innovación & Elegancia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 2. NUESTRA MARCA ==================== -->
+    <section id="marca" class="py-24 lg:py-32 bg-beige-light relative overflow-hidden">
+        <!-- Elemento decorativo sutil -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-beige rounded-full blur-3xl opacity-70 -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
+            <!-- Encabezado de Sección -->
+            <div class="max-w-3xl mb-16 reveal">
+                <span class="text-burgundy font-semibold text-xs uppercase tracking-[0.25em] block mb-3">Identidad & Esencia</span>
+                <h2 class="font-editorial text-4xl sm:text-5xl lg:text-6xl font-semibold text-navy leading-tight">
+                    Nacida en la frontera norte para trascender cada horizonte.
+                </h2>
+            </div>
+
+            <!-- Grid Presentación e Historia -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+                <!-- Columna Fotografía Editorial -->
+                <div class="lg:col-span-5 reveal">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-beige-dark group">
+                        <img 
+                            src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?auto=format&fit=crop&w=1000&q=85" 
+                            alt="Viajero moderno observando el horizonte con elegancia y determinación" 
+                            class="w-full h-[460px] object-cover transition-transform duration-700 group-hover:scale-105"
+                            onerror="this.src='https://placehold.co/800x1000/162E52/FFFFFF?text=AVYRA+ECUADOR'"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/20 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-white/95 backdrop-blur-md shadow-lg border border-beige">
+                            <p class="text-xs uppercase tracking-widest text-burgundy font-bold mb-1">Dirección & Creación</p>
+                            <p class="font-editorial text-2xl font-semibold text-navy">Melany Sarchi</p>
+                            <p class="text-xs text-slate-600 mt-0.5">Fundadora — Tulcán, Ecuador</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Historia y Propuesta de Valor -->
+                <div class="lg:col-span-7 space-y-6 reveal">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-navy/5 text-navy text-xs font-semibold uppercase tracking-widest">
+                        Nuestra Historia
+                    </div>
+                    <h3 class="font-editorial text-3xl sm:text-4xl font-semibold text-navy">
+                        De Tulcán al mundo: el arte de viajar con propósito
+                    </h3>
+                    <p class="text-slate-700 leading-relaxed text-base sm:text-lg">
+                        <strong>AVYRA</strong> surge en <strong>Tulcán, Ecuador</strong>, una ciudad emblemática marcada por el intercambio cultural, el movimiento constante y la conexión entre naciones. Impulsada por la visión de <strong>Melany Sarchi</strong>, la marca nació al observar las necesidades reales de quienes cruzan fronteras, aeropuertos y rutas por negocios, estudios o exploración personal.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Comprendimos que un gran viaje no comienza al aterrizar, sino en la tranquilidad de contar con equipamiento inteligente, ergonómico y sofisticado. Por ello, AVYRA fusiona estética minimalista en tonos azul profundo y borgoña con tecnología práctica que simplifica cada trayecto.
+                    </p>
+
+                    <!-- Bloque Propuesta de Valor -->
+                    <div class="p-6 sm:p-8 rounded-2xl bg-navy text-white shadow-xl border-l-4 border-burgundy mt-6">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 rounded-xl bg-white/10 text-champagne shrink-0">
+                                <i data-lucide="compass" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-editorial text-2xl font-semibold text-champagne mb-2">Propuesta de Valor</h4>
+                                <p class="text-beige/90 text-sm sm:text-base leading-relaxed">
+                                    Ofrecemos soluciones de viaje de alta durabilidad y diseño atemporal que integran organización inteligente, confort superior y seguridad en cada detalle, brindando una experiencia respaldada por asesoría cercana y orgullo ecuatoriano.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Misión, Visión y Valores -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal">
+                <!-- Misión -->
+                <div class="p-8 rounded-3xl bg-white border border-beige-dark shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-navy/5 text-navy flex items-center justify-center mb-6">
+                            <i data-lucide="navigation" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs uppercase tracking-widest text-burgundy font-bold">Propósito</span>
+                        <h3 class="font-editorial text-3xl font-semibold text-navy mt-1 mb-4">Misión</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Diseñar y acercar soluciones innovadoras, funcionales y elegantes que optimicen la experiencia de cada viajero, combinando calidad superior, comodidad ergonómica y atención personalizada desde Ecuador.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-beige text-xs text-slate-400 font-medium">
+                        AVYRA • Compromiso en movimiento
+                    </div>
+                </div>
+
+                <!-- Visión -->
+                <div class="p-8 rounded-3xl bg-white border border-beige-dark shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-burgundy/10 text-burgundy flex items-center justify-center mb-6">
+                            <i data-lucide="globe" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs uppercase tracking-widest text-burgundy font-bold">Horizonte</span>
+                        <h3 class="font-editorial text-3xl font-semibold text-navy mt-1 mb-4">Visión</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Consolidarnos como la marca ecuatoriana referente en equipamiento y accesorios premium para viajeros en Latinoamérica, reconocida por su distinción estética, innovación tecnológica y confianza absoluta.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-beige text-xs text-slate-400 font-medium">
+                        BEYOND EVERY JOURNEY
+                    </div>
+                </div>
+
+                <!-- Valores -->
+                <div class="p-8 rounded-3xl bg-beige border border-beige-dark shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="w-12 h-12 rounded-2xl bg-navy text-champagne flex items-center justify-center mb-6">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-burgundy font-bold">Principios</span>
+                    <h3 class="font-editorial text-3xl font-semibold text-navy mt-1 mb-5">Valores AVYRA</h3>
+                    <ul class="space-y-3.5 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-burgundy mt-1.5 shrink-0"></span>
+                            <div><strong class="text-navy">Innovación:</strong> <span class="text-slate-600">Tecnología aplicada a la practicidad real en ruta.</span></div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-burgundy mt-1.5 shrink-0"></span>
+                            <div><strong class="text-navy">Elegancia:</strong> <span class="text-slate-600">Líneas limpias, acabados sobrios y distinción atemporal.</span></div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-burgundy mt-1.5 shrink-0"></span>
+                            <div><strong class="text-navy">Confianza:</strong> <span class="text-slate-600">Materiales resistentes y respaldo cercano al cliente.</span></div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-burgundy mt-1.5 shrink-0"></span>
+                            <div><strong class="text-navy">Espíritu Viajero:</strong> <span class="text-slate-600">Pasión por descubrir, conectar y avanzar sin límites.</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 3. NUESTROS PRODUCTOS ==================== -->
+    <section id="productos" class="py-24 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+            <!-- Encabezado de Catálogo Institucional -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 reveal">
+                <div class="max-w-2xl">
+                    <span class="text-burgundy font-semibold text-xs uppercase tracking-[0.25em] block mb-3">Colección Oficial</span>
+                    <h2 class="font-editorial text-4xl sm:text-5xl lg:text-6xl font-semibold text-navy leading-tight">
+                        Soluciones diseñadas para cada etapa del trayecto.
+                    </h2>
+                </div>
+                <p class="text-slate-600 text-sm sm:text-base max-w-md leading-relaxed">
+                    Explora nuestras seis piezas insignias. Selecciona cualquier producto para descubrir sus especificaciones técnicas y materiales.
+                </p>
+            </div>
+
+            <!-- Grid de 6 Productos -->
+            <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Las tarjetas se renderizan dinámicamente desde JS para mantener sincronía total con los modales -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 4. EXPERIENCIA AVYRA ==================== -->
+    <section id="experiencia" class="py-24 lg:py-32 bg-navy text-white relative overflow-hidden">
+        <!-- Textura ambiental sutil -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#C8A97E_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
+            <!-- Encabezado -->
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-champagne font-semibold text-xs uppercase tracking-[0.25em] block mb-3">Estilo de Vida & Destinos</span>
+                <h2 class="font-editorial text-4xl sm:text-5xl lg:text-6xl font-semibold text-white mb-5">
+                    Experiencia AVYRA
+                </h2>
+                <p class="text-beige/80 text-base sm:text-lg font-light leading-relaxed">
+                    Desde salas de embarque internacionales hasta rutas panorámicas por los Andes y el mundo. Así se vive viajar con serenidad, orden y carácter.
+                </p>
+            </div>
+
+            <!-- Mosaico Editorial Bento -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 reveal">
+                <!-- Tarjeta Grande 1: Aeropuertos Internacionales -->
+                <div class="md:col-span-7 relative rounded-3xl overflow-hidden h-80 sm:h-96 group border border-white/15">
+                    <img 
+                        src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?auto=format&fit=crop&w=1200&q=85" 
+                        alt="Terminal de aeropuerto moderno con luz natural y viajeros en tránsito" 
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        onerror="this.src='https://placehold.co/1200x800/162E52/FFFFFF?text=Conexiones+Globales'"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/30 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <span class="px-3 py-1 rounded-full bg-burgundy text-white text-[11px] uppercase tracking-widest font-semibold">Tránsito Ágil</span>
+                        <h3 class="font-editorial text-2xl sm:text-3xl font-semibold text-white mt-2">Conexiones sin fricciones</h3>
+                        <p class="text-beige/85 text-sm mt-1 max-w-lg">Equipamiento pensado para controles de seguridad fluidos, cabinas ejecutivas y escalas internacionales.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Viajero Ejecutivo -->
+                <div class="md:col-span-5 relative rounded-3xl overflow-hidden h-80 sm:h-96 group border border-white/15">
+                    <img 
+                        src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=900&q=85" 
+                        alt="Espacio de trabajo y tecnología portátil para el viajero contemporáneo" 
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        onerror="this.src='https://placehold.co/900x800/6B1D2F/FFFFFF?text=Productividad+en+Ruta'"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/30 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <span class="px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-champagne text-[11px] uppercase tracking-widest font-semibold">Conectividad</span>
+                        <h3 class="font-editorial text-2xl sm:text-3xl font-semibold text-white mt-2">Productividad en cada escala</h3>
+                        <p class="text-beige/85 text-sm mt-1">Energía y organización tecnológica al alcance de tu mano en cualquier huso horario.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: Destinos y Exploración -->
+                <div class="md:col-span-5 relative rounded-3xl overflow-hidden h-80 sm:h-88 group border border-white/15">
+                    <img 
+                        src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=900&q=85" 
+                        alt="Ruta escénica hacia montañas y horizontes abiertos" 
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        onerror="this.src='https://placehold.co/900x800/0F223D/C8A97E?text=Horizontes+Abiertos'"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/30 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <span class="px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-champagne text-[11px] uppercase tracking-widest font-semibold">Libertad</span>
+                        <h3 class="font-editorial text-2xl sm:text-3xl font-semibold text-white mt-2">De los Andes al mundo</h3>
+                        <p class="text-beige/85 text-sm mt-1">Inspirados en la riqueza geográfica de Ecuador para acompañar rutas terrestres y aéreas.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4: Confort y Bienestar -->
+                <div class="md:col-span-7 relative rounded-3xl overflow-hidden h-80 sm:h-88 group border border-white/15">
+                    <img 
+                        src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=85" 
+                        alt="Viajero disfrutando un trayecto cómodo y sereno" 
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        onerror="this.src='https://placehold.co/1200x800/162E52/C8A97E?text=Confort+Superior'"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/35 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <span class="px-3 py-1 rounded-full bg-burgundy text-white text-[11px] uppercase tracking-widest font-semibold">Bienestar</span>
+                        <h3 class="font-editorial text-2xl sm:text-3xl font-semibold text-white mt-2">El lujo de llegar descansado</h3>
+                        <p class="text-beige/85 text-sm mt-1 max-w-xl">Ergonomía estudiada para transformar vuelos largos y trayectos extensos en momentos de verdadero descanso.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 5. ¿POR QUÉ AVYRA? ==================== -->
+    <section id="por-que-avyra" class="py-24 lg:py-32 bg-beige">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-burgundy font-semibold text-xs uppercase tracking-[0.25em] block mb-3">Diferenciales de Marca</span>
+                <h2 class="font-editorial text-4xl sm:text-5xl lg:text-6xl font-semibold text-navy mb-5">
+                    ¿Por qué elegir AVYRA?
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    Cada solución responde a un estándar exigente donde la estética refinada se encuentra con la utilidad cotidiana.
+                </p>
+            </div>
+
+            <!-- 5 Pilares Institucionales -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+                <!-- Pilar 1 -->
+                <div class="p-8 rounded-3xl bg-white border border-beige-dark shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-navy text-champagne flex items-center justify-center mb-6 group-hover:bg-burgundy group-hover:text-white transition-colors">
+                        <i data-lucide="cpu" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-editorial text-2xl font-semibold text-navy mb-3">Innovación Constante</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Integramos funcionalidades inteligentes como puertos de carga integrados, medición digital precisa y materiales de última generación adaptados al viajero actual.
+                    </p>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="p-8 rounded-3xl bg-white border border-beige-dark shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-navy text-champagne flex items-center justify-center mb-6 group-hover:bg-burgundy group-hover:text-white transition-colors">
+                        <i data-lucide="feather" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-editorial text-2xl font-semibold text-navy mb-3">Comodidad Ergonómica</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Espumas viscoelásticas de alta densidad, distribuciones de peso balanceadas y texturas suaves al tacto que reducen la fatiga en cualquier desplazamiento.
+                    </p>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="p-8 rounded-3xl bg-white border border-beige-dark shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-navy text-champagne flex items-center justify-center mb-6 group-hover:bg-burgundy group-hover:text-white transition-colors">
+                        <i data-lucide="layers" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-editorial text-2xl font-semibold text-navy mb-3">Funcionalidad Inteligente</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Compartimentos modulares, compatibilidad eléctrica internacional y dimensiones optimizadas para cabina que eliminan el desorden y los imprevistos.
+                    </p>
+                </div>
+
+                <!-- Pilar 4 -->
+                <div class="p-8 rounded-3xl bg-white border border-beige-dark shadow-sm hover:shadow-xl transition-all duration-300 group lg:col-span-1">
+                    <div class="w-14 h-14 rounded-2xl bg-burgundy text-white flex items-center justify-center mb-6">
+                        <i data-lucide="user-check" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-editorial text-2xl font-semibold text-navy mb-3">Atención Personalizada</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Asesoría directa y humana liderada desde Tulcán, Ecuador, acompañándote a elegir las soluciones ideales según tu tipo de ruta o destino.
+                    </p>
+                </div>
+
+                <!-- Pilar 5 (Destacado doble ancho en desktop) -->
+                <div class="p-8 rounded-3xl bg-navy text-white border border-navy-light shadow-xl md:col-span-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                    <div class="space-y-3 max-w-xl">
+                        <div class="inline-flex items-center gap-2 text-champagne text-xs uppercase tracking-widest font-semibold">
+                            <i data-lucide="shield-check" class="w-4 h-4"></i>
+                            <span>Garantía Institucional</span>
+                        </div>
+                        <h3 class="font-editorial text-3xl font-semibold text-white">Compromiso Total con Nuestros Clientes</h3>
+                        <p class="text-beige/85 text-sm leading-relaxed">
+                            En AVYRA cada detalle cuenta. Nos respalda una filosofía de transparencia, durabilidad comprobada y cercanía genuina con la comunidad viajera del Ecuador.
+                        </p>
+                    </div>
+                    <a href="#contacto" class="px-6 py-3.5 rounded-full bg-burgundy hover:bg-burgundy-light text-white text-xs uppercase tracking-widest font-semibold transition shrink-0 shadow-lg">
+                        Conversemos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 6. CONTACTO INSTITUCIONAL ==================== -->
+    <section id="contacto" class="py-24 lg:py-32 bg-beige-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <!-- Información Oficial de Contacto -->
+                <div class="lg:col-span-5 space-y-8 reveal">
+                    <div>
+                        <span class="text-burgundy font-semibold text-xs uppercase tracking-[0.25em] block mb-3">Canales Oficiales</span>
+                        <h2 class="font-editorial text-4xl sm:text-5xl font-semibold text-navy leading-tight mb-4">
+                            Inicia tu próximo viaje con AVYRA.
+                        </h2>
+                        <p class="text-slate-600 text-base leading-relaxed">
+                            Estamos listos para resolver tus inquietudes institucionales, brindar información detallada sobre nuestra línea de productos o establecer alianzas estratégicas.
+                        </p>
+                    </div>
+
+                    <!-- Tarjeta de Datos Oficiales -->
+                    <div class="p-8 rounded-3xl bg-navy text-white shadow-2xl space-y-6 border border-navy-light">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-white/10 text-champagne flex items-center justify-center shrink-0">
+                                <i data-lucide="user" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-champagne">Responsable de Marca</p>
+                                <p class="font-semibold text-lg">Melany Sarchi</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-white/10 text-champagne flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-champagne">Ubicación</p>
+                                <p class="font-semibold text-base">Tulcán, Carchi — Ecuador</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-white/10 text-champagne flex items-center justify-center shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-champagne">Correo Electrónico</p>
+                                <a href="mailto:melany.sarchi@upec.edu.ec" class="font-medium text-base hover:text-champagne transition break-all">
+                                    melany.sarchi@upec.edu.ec
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-white/10 text-champagne flex items-center justify-center shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-champagne">WhatsApp Directo</p>
+                                <a href="https://wa.me/593963774328?text=Hola%20AVYRA,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20institucional." target="_blank" rel="noopener noreferrer" class="font-semibold text-base hover:text-champagne transition">
+                                    0963774328 (+593 96 377 4328)
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Espacios preparados para Instagram y TikTok sin enlaces inventados -->
+                        <div class="pt-5 border-t border-white/15">
+                            <p class="text-xs uppercase tracking-widest text-champagne mb-3">Comunidad Digital</p>
+                            <div class="flex flex-wrap gap-3">
+                                <button type="button" onclick="showSocialNotice('Instagram')" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-xs font-medium transition">
+                                    <i data-lucide="instagram" class="w-4 h-4 text-champagne"></i>
+                                    <span>Instagram • Próximamente</span>
+                                </button>
+                                <button type="button" onclick="showSocialNotice('TikTok')" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-xs font-medium transition">
+                                    <svg class="w-4 h-4 text-champagne" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                                    </svg>
+                                    <span>TikTok • Próximamente</span>
+                                </button>
+                            </div>
+                            <p id="social-notice" class="hidden mt-3 text-xs text-champagne bg-white/5 px-3 py-2 rounded-lg border border-champagne/30"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Contacto Validado -->
+                <div class="lg:col-span-7 reveal">
+                    <div class="p-8 sm:p-10 rounded-3xl bg-white border border-beige-dark shadow-xl">
+                        <h3 class="font-editorial text-3xl font-semibold text-navy mb-2">Envíanos un mensaje</h3>
+                        <p class="text-slate-500 text-sm mb-8">Completa el formulario y te responderemos a la brevedad.</p>
+
+                        <form id="contact-form" novalidate class="space-y-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <!-- Campo Nombre -->
+                                <div>
+                                    <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-navy mb-2">Nombre completo *</label>
+                                    <input 
+                                        type="text" 
+                                        id="name" 
+                                        name="name" 
+                                        placeholder="Ej. Andrés Villacís" 
+                                        class="w-full px-4 py-3.5 rounded-xl bg-beige-light border border-beige-dark text-navy text-sm focus:outline-none focus:border-navy focus:ring-2 focus:ring-navy/10 transition"
+                                        required
+                                    >
+                                    <p id="error-name" class="hidden mt-1.5 text-xs text-burgundy font-medium flex items-center gap-1">
+                                        <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i>
+                                        <span>Por favor ingresa tu nombre completo (mínimo 3 caracteres).</span>
+                                    </p>
+                                </div>
+
+                                <!-- Campo Correo -->
+                                <div>
+                                    <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-navy mb-2">Correo electrónico *</label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        placeholder="ejemplo@correo.com" 
+                                        class="w-full px-4 py-3.5 rounded-xl bg-beige-light border border-beige-dark text-navy text-sm focus:outline-none focus:border-navy focus:ring-2 focus:ring-navy/10 transition"
+                                        required
+                                    >
+                                    <p id="error-email" class="hidden mt-1.5 text-xs text-burgundy font-medium flex items-center gap-1">
+                                        <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i>
+                                        <span>Ingresa un correo electrónico válido.</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Campo Asunto / Interés -->
+                            <div>
+                                <label for="subject" class="block text-xs font-semibold uppercase tracking-wider text-navy mb-2">Motivo de consulta *</label>
+                                <select 
+                                    id="subject" 
+                                    name="subject" 
+                                    class="w-full px-4 py-3.5 rounded-xl bg-beige-light border border-beige-dark text-navy text-sm focus:outline-none focus:border-navy focus:ring-2 focus:ring-navy/10 transition"
+                                >
+                                    <option value="">Selecciona una opción...</option>
+                                    <option value="Información sobre productos AVYRA">Información sobre productos AVYRA</option>
+                                    <option value="Asesoría personalizada para viajeros">Asesoría personalizada para viajeros</option>
+                                    <option value="Alianzas comerciales o institucionales">Alianzas comerciales o institucionales</option>
+                                    <option value="Consulta general">Consulta general</option>
+                                </select>
+                                <p id="error-subject" class="hidden mt-1.5 text-xs text-burgundy font-medium flex items-center gap-1">
+                                    <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i>
+                                    <span>Selecciona el motivo de tu consulta.</span>
+                                </p>
+                            </div>
+
+                            <!-- Campo Mensaje -->
+                            <div>
+                                <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-navy mb-2">Mensaje *</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    rows="4" 
+                                    placeholder="Cuéntanos cómo podemos ayudarte en tu próximo viaje..." 
+                                    class="w-full px-4 py-3.5 rounded-xl bg-beige-light border border-beige-dark text-navy text-sm focus:outline-none focus:border-navy focus:ring-2 focus:ring-navy/10 transition resize-none"
+                                    required
+                                ></textarea>
+                                <p id="error-message" class="hidden mt-1.5 text-xs text-burgundy font-medium flex items-center gap-1">
+                                    <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i>
+                                    <span>Escribe un mensaje de al menos 15 caracteres.</span>
+                                </p>
+                            </div>
+
+                            <!-- Botón Enviar -->
+                            <div class="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                <span class="text-xs text-slate-400">* Campos obligatorios</span>
+                                <button 
+                                    type="submit" 
+                                    class="px-8 py-4 rounded-full bg-burgundy hover:bg-burgundy-light text-white text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-lg hover:shadow-burgundy/30 flex items-center justify-center gap-2"
+                                >
+                                    <span>Enviar Mensaje</span>
+                                    <i data-lucide="send" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+
+                            <!-- Mensaje de Confirmación Exitoso -->
+                            <div id="form-success" class="hidden p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check-circle-2" class="w-6 h-6 text-emerald-600 shrink-0 mt-0.5"></i>
+                                    <div>
+                                        <h4 class="font-semibold text-sm">¡Mensaje enviado con éxito!</h4>
+                                        <p class="text-xs text-emerald-800 mt-1 leading-relaxed">
+                                            Gracias por contactar a <strong>AVYRA</strong>. Melany Sarchi revisará tu solicitud y se pondrá en contacto contigo muy pronto.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER INSTITUCIONAL ==================== -->
+    <footer class="bg-navy-dark text-white pt-16 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+                <!-- Columna 1: Marca -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-champagne" viewBox="0 0 32 32" fill="none">
+                                <path d="M16 3L27 27L16 21.5L5 27L16 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                                <path d="M10.5 18.5H21.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="font-editorial text-2xl font-bold tracking-[0.22em]">AVYRA</span>
+                        </div>
+                    </div>
+                    <p class="text-champagne text-xs uppercase tracking-[0.28em] font-medium">BEYOND EVERY JOURNEY</p>
+                    <p class="text-beige/70 text-sm max-w-md leading-relaxed">
+                        Más allá de cada viaje. Marca ecuatoriana especializada en soluciones y equipamiento contemporáneo para viajeros exigentes.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Navegación -->
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest text-champagne font-semibold mb-4">Navegación</h4>
+                    <ul class="space-y-2.5 text-sm text-beige/80">
+                        <li><a href="#inicio" class="hover:text-white transition">Inicio</a></li>
+                        <li><a href="#marca" class="hover:text-white transition">Nuestra Marca</a></li>
+                        <li><a href="#productos" class="hover:text-white transition">Nuestros Productos</a></li>
+                        <li><a href="#experiencia" class="hover:text-white transition">Experiencia AVYRA</a></li>
+                        <li><a href="#por-que-avyra" class="hover:text-white transition">¿Por qué AVYRA?</a></li>
+                        <li><a href="#contacto" class="hover:text-white transition">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Institucional -->
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest text-champagne font-semibold mb-4">Información Oficial</h4>
+                    <ul class="space-y-2.5 text-sm text-beige/80">
+                        <li>Responsable: <span class="text-white font-medium">Melany Sarchi</span></li>
+                        <li>Sede: <span class="text-white font-medium">Tulcán, Ecuador</span></li>
+                        <li>Correo: <a href="mailto:melany.sarchi@upec.edu.ec" class="hover:text-champagne transition">melany.sarchi@upec.edu.ec</a></li>
+                        <li>WhatsApp: <a href="https://wa.me/593963774328" target="_blank" rel="noopener noreferrer" class="hover:text-champagne transition">0963774328</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Derechos Reservados -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-beige/60">
+                <p>&copy; <span id="current-year">2026</span> AVYRA Ecuador. Todos los derechos reservados.</p>
+                <p>Sitio Web Oficial Institucional • Diseñado en Tulcán, Ecuador.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== MODAL DE CARACTERÍSTICAS DE PRODUCTO ==================== -->
+    <div id="product-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 bg-navy-dark/80 backdrop-blur-sm transition-opacity" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="bg-white rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl border border-beige-dark transform transition-all max-h-[90vh] flex flex-col">
+            <!-- Cabecera Modal -->
+            <div class="flex items-center justify-between px-6 py-4 bg-navy text-white shrink-0">
+                <div class="flex items-center gap-2">
+                    <span class="text-xs uppercase tracking-widest text-champagne font-semibold" id="modal-category">Colección AVYRA</span>
+                </div>
+                <button id="close-modal-btn" aria-label="Cerrar ventana" class="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white transition">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Cuerpo Modal con Scroll interno -->
+            <div class="overflow-y-auto p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <!-- Imagen Producto -->
+                <div class="md:col-span-5">
+                    <div class="rounded-2xl overflow-hidden bg-beige border border-beige-dark aspect-[4/5]">
+                        <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Especificaciones Técnicas -->
+                <div class="md:col-span-7 space-y-5">
+                    <div>
+                        <h3 id="modal-title" class="font-editorial text-3xl sm:text-4xl font-semibold text-navy leading-tight"></h3>
+                        <p id="modal-subtitle" class="text-burgundy text-xs uppercase tracking-widest font-semibold mt-1"></p>
+                    </div>
+
+                    <p id="modal-description" class="text-slate-600 text-sm leading-relaxed"></p>
+
+                    <!-- Lista de Características -->
+                    <div class="bg-beige-light p-5 rounded-2xl border border-beige-dark">
+                        <h4 class="text-xs uppercase tracking-widest text-navy font-bold mb-3">Características Principales</h4>
+                        <ul id="modal-specs" class="space-y-2.5 text-sm text-slate-700">
+                            <!-- Se llena dinámicamente -->
+                        </ul>
+                    </div>
+
+                    <!-- Beneficio clave -->
+                    <div class="flex items-center gap-3 text-xs text-slate-500">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-champagne shrink-0"></i>
+                        <span id="modal-ideal-for"></span>
+                    </div>
+
+                    <!-- Acción institucional: Consultar por WhatsApp -->
+                    <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                        <a id="modal-whatsapp-link" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 py-3.5 px-6 rounded-full bg-burgundy hover:bg-burgundy-light text-white text-xs uppercase tracking-widest font-semibold transition flex items-center justify-center gap-2 shadow-lg">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Consultar sobre este producto</span>
+                        </a>
+                        <button type="button" onclick="closeProductModal()" class="py-3.5 px-6 rounded-full border border-beige-dark text-navy hover:bg-beige text-xs uppercase tracking-widest font-semibold transition">
+                            Cerrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== BOTÓN FLOTANTE DE WHATSAPP ==================== -->
+    <a 
+        href="https://wa.me/593963774328?text=Hola%20AVYRA,%20visito%20su%20p%C3%A1gina%20web%20institucional%20y%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n." 
+        target="_blank" 
+        rel="noopener noreferrer"
+        aria-label="Contactar a AVYRA por WhatsApp"
+        class="whatsapp-float fixed bottom-6 right-6 z-40 flex items-center gap-3 bg-navy hover:bg-burgundy text-white px-4 py-3.5 rounded-full shadow-2xl border border-white/20 transition-all duration-300 group"
+    >
+        <span class="w-8 h-8 rounded-full bg-[#25D366] text-white flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+            </svg>
+        </span>
+        <span class="hidden sm:inline text-xs font-semibold tracking-wider uppercase pr-1">WhatsApp AVYRA</span>
+    </a>
+
+    <!-- ==================== LÓGICA JAVASCRIPT ==================== -->
+    <script>
+        // 1. Base de datos institucional de los 6 productos AVYRA
+        const productsData = [
+            {
+                id: 'maleta-pro',
+                category: 'Equipaje Inteligente',
+                name: 'Maleta Inteligente AVYRA Pro',
+                subtitle: 'Ingeniería rígida de cabina con conectividad integrada',
+                shortDesc: 'Carcasa de policarbonato aeroespacial resistente a impactos, ruedas silenciosas 360° y puerto de carga integrado para desplazamientos ágiles.',
+                fullDesc: 'Diseñada para cumplir con las normativas internacionales de equipaje de mano, la Maleta Inteligente AVYRA Pro combina una estructura ultraligera de policarbonato de grado aeroespacial con un sistema interno de compresión y acceso frontal rápido para dispositivos.',
+                image: 'https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?auto=format&fit=crop&w=900&q=85',
+                fallback: 'https://placehold.co/800x1000/0F223D/C8A97E?text=Maleta+AVYRA+Pro',
+                specs: [
+                    'Policarbonato alemán multicapa resistente a rayaduras e impactos.',
+                    'Puerto externo USB-A y USB-C con compartimento interno para batería portátil.',
+                    'Cerradura de combinación homologada TSA integrada al chasis.',
+                    '4 ruedas dobles japonesas silenciosas con giro fluido de 360°.',
+                    'Mango telescópico de aluminio anodizado con 4 niveles de altura.'
+                ],
+                idealFor: 'Ideal para vuelos ejecutivos, viajes internacionales de negocios y escapadas de fin de semana.'
+            },
+            {
+                id: 'mochila-elite',
+                category: 'Movilidad Urbana & Aérea',
+                name: 'Mochila Travel Elite',
+                subtitle: 'Ergonomía ejecutiva con apertura 180° y protección térmica',
+                shortDesc: 'Diseño estructurado impermeable con compartimento acolchado para laptop de hasta 16", respaldo transpirable y banda de sujeción para maleta.',
+                fullDesc: 'La Mochila Travel Elite redefine el equipaje personal. Su apertura plana tipo maleta agiliza la inspección en aeropuertos, mientras sus textiles repelentes al agua y cierres sellados resguardan tus pertenencias bajo cualquier clima.',
+                image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85',
+                fallback: 'https://placehold.co/800x1000/162E52/FFFFFF?text=Mochila+Travel+Elite',
+                specs: [
+                    'Tejido balístico de alta densidad resistente al agua y al desgaste.',
+                    'Compartimento independiente acolchado para laptop de 15.6" a 16".',
+                    'Bolsillo oculto antirrobo en el panel lumbar y manga para trolley.',
+                    'Espaldar ergonómico con canales de ventilación y correas acolchadas.',
+                    'Capacidad expandible manteniendo una silueta estilizada.'
+                ],
+                idealFor: 'Ideal para nómadas digitales, viajeros frecuentes y trayectos interurbanos.'
+            },
+            {
+                id: 'almohada-premium',
+                category: 'Confort & Descanso',
+                name: 'Almohada de Cuello Premium',
+                subtitle: 'Soporte cervical 360° con espuma viscoelástica de memoria',
+                shortDesc: 'Núcleo de memory foam de retorno lento con funda transpirable lavable y broche ajustable para un descanso reparador en vuelos largos.',
+                fullDesc: 'Desarrollada bajo principios ergonómicos para evitar la inclinación cervical durante el sueño sentado, la Almohada de Cuello Premium de AVYRA brinda firmeza equilibrada y suavidad térmica, compactándose fácilmente en su bolsa de transporte.',
+                image: 'https://images.unsplash.com/photo-1520923642038-b4259acecbd7?auto=format&fit=crop&w=900&q=85',
+                fallback: 'https://placehold.co/800x1000/6B1D2F/FFFFFF?text=Almohada+Cuello+Premium',
+                specs: [
+                    'Espuma viscoelástica (Memory Foam) de alta densidad con respuesta lenta.',
+                    'Diseño anatómico elevado que estabiliza cuello y mandíbula.',
+                    'Funda exterior hipoalergénica, suave al tacto, desmontable y lavable.',
+                    'Cierre frontal magnético/ajustable adaptable a cada usuario.',
+                    'Incluye estuche compacto de compresión para sujetar al equipaje.'
+                ],
+                idealFor: 'Ideal para vuelos transoceánicos, viajes terrestres nocturnos y momentos de relajación.'
+            },
+            {
+                id: 'organizador-tech',
+                category: 'Orden Digital',
+                name: 'Organizador Tech Travel',
+                subtitle: 'Estuche modular estructurado para cables, cargadores y accesorios',
+                shortDesc: 'Interior inteligente con bandas elásticas, divisiones acolchadas y recubrimiento resistente a salpicaduras para mantener tu tecnología impecable.',
+                fullDesc: 'Olvida los cables enredados en el fondo del equipaje. El Organizador Tech Travel clasifica cada accesorio electrónico en compartimentos visibles y protegidos, facilitando el acceso inmediato en salas de espera, hoteles o cafeterías.',
+                image: 'https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=900&q=85',
+                fallback: 'https://placehold.co/800x1000/0F223D/FFFFFF?text=Organizador+Tech+Travel',
+                specs: [
+                    'Exterior semirrígido repelente al agua con cremalleras de deslizamiento suave.',
+                    'Compartimentos dedicados para cargadores, discos externos, cables y memorias.',
+                    'Bolsillos de malla transpirable de visualización rápida.',
+                    'Forro interior suave anti-fricción que evita rayaduras en dispositivos.',
+                    'Formato compacto que cabe perfectamente en cualquier mochila o maletín.'
+                ],
+                idealFor: 'Ideal para ejecutivos, creadores de contenido y viajeros con múltiples dispositivos.'
+            },
+            {
+                id: 'adaptador-universal',
+                category: 'Conectividad Global',
+                name: 'Adaptador Universal AVYRA',
+                subtitle: 'Compatibilidad eléctrica en más de 150 países con carga rápida',
+                shortDesc: 'Sistema retráctil todo-en-uno con enchufes US, EU, UK y AUS, puertos USB de carga inteligente y doble fusible de protección.',
+                fullDesc: 'Un solo dispositivo compacto para conectar tu mundo sin importar el destino. El Adaptador Universal AVYRA incorpora mecanismos deslizantes seguros y gestión inteligente de energía para proteger tus equipos frente a variaciones de voltaje.',
+                image: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=900&q=85',
+                fallback: 'https://placehold.co/800x1000/162E52/C8A97E?text=Adaptador+Universal+AVYRA',
+                specs: [
+                    'Compatible con estándares eléctricos de América, Europa, Reino Unido, Asia y Oceanía.',
+                    'Múltiples puertos USB-C y USB-A con distribución inteligente de carga.',
+                    'Doble fusible de seguridad integrado contra sobrecargas y cortocircuitos.',
+                    'Carcasa ignífuga de policarbonato de alta resistencia térmica.',
+                    'Bloqueo mecánico de clavijas para conexión firme en pared.'
+                ],
+                idealFor: 'Ideal para viajes internacionales multidestino, turismo global y misiones académicas o empresariales.'
+            },
+            {
+                id: 'bascula-digital',
+                category: 'Precisión en Equipaje',
+                name: 'Báscula Digital Travel',
+                subtitle: 'Medición de alta precisión con pantalla LCD retroiluminada',
+                shortDesc: 'Diseño ergonómico ultracompacto con capacidad hasta 50 kg, función tara y correa reforzada para evitar cargos por sobrepeso en aerolíneas.',
+                fullDesc: 'Viaja con la certeza de cumplir las políticas de peso de cualquier aerolínea antes de llegar al mostrador. La Báscula Digital Travel ofrece lectura instantánea con bloqueo automático de peso y acabado metálico elegante.',
+                image: 'https://images.unsplash.com/photo-1516733968668-dbdce39c4651?auto=format&fit=crop&w=900&q=85',
+                fallback: 'https://placehold.co/800x1000/6B1D2F/C8A97E?text=Bascula+Digital+Travel',
+                specs: [
+                    'Capacidad máxima de 50 kg (110 lb) con precisión de 10 gramos.',
+                    'Pantalla LCD de alto contraste con retroiluminación para lectura nocturna.',
+                    'Función de bloqueo de lectura (Data Lock) y puesta a cero (Tara).',
+                    'Correa de nylon trenzado de alta resistencia con hebilla metálica segura.',
+                    'Indicador de batería baja y apagado automático para ahorro energético.'
+                ],
+                idealFor: 'Ideal para todo viajero aéreo que busca tranquilidad y control exacto en ida y retorno.'
+            }
+        ];
+
+        // 2. Renderizar tarjetas de productos en el grid
+        function renderProducts() {
+            const grid = document.getElementById('products-grid');
+            if (!grid) return;
+
+            grid.innerHTML = productsData.map((product) => `
+                <article class="product-card group bg-beige-light rounded-3xl overflow-hidden border border-beige-dark shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col justify-between reveal">
+                    <div>
+                        <!-- Fotografía del producto -->
+                        <div class="relative h-72 overflow-hidden bg-navy/5">
+                            <img 
+                                src="${product.image}" 
+                                alt="${product.name} - AVYRA Ecuador" 
+                                class="product-img w-full h-full object-cover transition-transform duration-700"
+                                onerror="this.src='${product.fallback}'"
+                            >
+                            <div class="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                            <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full bg-white/90 backdrop-blur-md text-navy text-[11px] uppercase tracking-widest font-semibold shadow-sm">
+                                ${product.category}
+                            </span>
+                        </div>
+
+                        <!-- Información Breve -->
+                        <div class="p-7 pb-4">
+                            <h3 class="font-editorial text-2xl sm:text-3xl font-semibold text-navy group-hover:text-burgundy transition-colors">
+                                ${product.name}
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mt-3">
+                                ${product.shortDesc}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Botón Ver Características -->
+                    <div class="px-7 pb-7 pt-2">
+                        <button 
+                            type="button"
+                            onclick="openProductModal('${product.id}')"
+                            class="w-full py-3.5 px-5 rounded-2xl bg-navy hover:bg-burgundy text-white text-xs uppercase tracking-widest font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
+                        >
+                            <span>Ver características</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        // 3. Control de Modal de Producto
+        const modal = document.getElementById('product-modal');
+
+        function openProductModal(productId) {
+            const product = productsData.find(p => p.id === productId);
+            if (!product) return;
+
+            document.getElementById('modal-category').textContent = product.category;
+            document.getElementById('modal-title').textContent = product.name;
+            document.getElementById('modal-subtitle').textContent = product.subtitle;
+            document.getElementById('modal-description').textContent = product.fullDesc;
+            document.getElementById('modal-ideal-for').textContent = product.idealFor;
+
+            const modalImg = document.getElementById('modal-img');
+            modalImg.src = product.image;
+            modalImg.alt = product.name;
+            modalImg.onerror = function() { this.src = product.fallback; };
+
+            const specsList = document.getElementById('modal-specs');
+            specsList.innerHTML = product.specs.map(spec => `
+                <li class="flex items-start gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-burgundy mt-2 shrink-0"></span>
+                    <span>${spec}</span>
+                </li>
+            `).join('');
+
+            // Enlace institucional directo a WhatsApp con el nombre del producto
+            const waText = encodeURIComponent(`Hola AVYRA, me gustaría conocer más detalles institucionales sobre: ${product.name}.`);
+            document.getElementById('modal-whatsapp-link').href = `https://wa.me/593963774328?text=${waText}`;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+            lucide.createIcons();
+        }
+
+        function closeProductModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('close-modal-btn').addEventListener('click', closeProductModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeProductModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeProductModal();
+            }
+        });
+
+        // 4. Efecto Navbar al hacer scroll y Menú Móvil
+        const navbar = document.getElementById('navbar');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-navy/95', 'backdrop-blur-lg', 'shadow-xl', 'py-3.5', 'border-b', 'border-white/10');
+                navbar.classList.remove('py-5');
+            } else {
+                navbar.classList.remove('bg-navy/95', 'backdrop-blur-lg', 'shadow-xl', 'py-3.5', 'border-b', 'border-white/10');
+                navbar.classList.add('py-5');
+            }
+        });
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 5. Aviso discreto para redes sociales en preparación
+        function showSocialNotice(platform) {
+            const notice = document.getElementById('social-notice');
+            notice.textContent = `Canal oficial de AVYRA en ${platform} en preparación. Muy pronto compartiremos novedades desde Tulcán, Ecuador.`;
+            notice.classList.remove('hidden');
+        }
+
+        // 6. Validación del Formulario de Contacto
+        const contactForm = document.getElementById('contact-form');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const subjectInput = document.getElementById('subject');
+        const messageInput = document.getElementById('message');
+
+        function validateEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function setFieldError(input, errorId, hasError) {
+            const errorEl = document.getElementById(errorId);
+            if (hasError) {
+                errorEl.classList.remove('hidden');
+                input.classList.add('border-burgundy', 'bg-burgundy/5');
+                input.classList.remove('border-beige-dark');
+            } else {
+                errorEl.classList.add('hidden');
+                input.classList.remove('border-burgundy', 'bg-burgundy/5');
+                input.classList.add('border-beige-dark');
+            }
+        }
+
+        // Validación en tiempo real al escribir
+        nameInput.addEventListener('input', () => setFieldError(nameInput, 'error-name', nameInput.value.trim().length < 3));
+        emailInput.addEventListener('input', () => setFieldError(emailInput, 'error-email', !validateEmail(emailInput.value.trim())));
+        subjectInput.addEventListener('change', () => setFieldError(subjectInput, 'error-subject', subjectInput.value === ''));
+        messageInput.addEventListener('input', () => setFieldError(messageInput, 'error-message', messageInput.value.trim().length < 15));
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const isNameInvalid = nameInput.value.trim().length < 3;
+            const isEmailInvalid = !validateEmail(emailInput.value.trim());
+            const isSubjectInvalid = subjectInput.value === '';
+            const isMessageInvalid = messageInput.value.trim().length < 15;
+
+            setFieldError(nameInput, 'error-name', isNameInvalid);
+            setFieldError(emailInput, 'error-email', isEmailInvalid);
+            setFieldError(subjectInput, 'error-subject', isSubjectInvalid);
+            setFieldError(messageInput, 'error-message', isMessageInvalid);
+
+            if (!isNameInvalid && !isEmailInvalid && !isSubjectInvalid && !isMessageInvalid) {
+                const successBox = document.getElementById('form-success');
+                successBox.classList.remove('hidden');
+                contactForm.reset();
+
+                setTimeout(() => {
+                    successBox.classList.add('hidden');
+                }, 7000);
+            }
+        });
+
+        // 7. Animaciones discretas al hacer scroll (IntersectionObserver)
+        function initScrollReveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            reveals.forEach(el => observer.observe(el));
+        }
+
+        // Inicialización al cargar el documento
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+            lucide.createIcons();
+            initScrollReveal();
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
